@@ -17,11 +17,10 @@
 
 ---
 
-<h3 align=center>
+<h2 align=center>
 Mandatory
-</h3>
+</h2>
 
-<br/>
 <br/>
 <div align="center">
 <p>You must create a communication program in the form of a client and a server.</p>
@@ -42,14 +41,14 @@ You can only use these two signals: SIGUSR1 and SIGUSR2.</p>
 </div>
 <br/>
 <div align="center">
-Server:
+<h3>Server:</h3>
 </div>
 <p>Initializes and waits for signals. It sets up a process to listen for signals.</p>
 <p>Uses sigaction or signal to define a signal handler that reacts to specific signals.</p>
 <p>Receives signals from the client and translates them into bits, which are then grouped to form complete messages.</p>
 <p>Displays the received messages on standard output.</p>
 <div align="center">
-Client:
+<h3>Client:</h3>
 </div>
 <p>Converts the message to be sent into a series of bits.</p>
 <p>Sends signals to the server process to represent these bits. For example, for each bit in the <p>message, the client sends a SIGUSR1 or SIGUSR2 signal.</p>
